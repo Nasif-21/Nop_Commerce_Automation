@@ -4,6 +4,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.time.Duration;
 
 public class Utils {
@@ -77,4 +79,53 @@ public class Utils {
 
     }
 
+    // Saving an auth token into the js file
+
+    public static void getAuth(WebDriver driver) throws IOException {
+
+        // As the auth token saved in cookies, we need to get cookies using sellenium cookies method
+
+        Cookie authCookie = driver.manage().getCookieNamed(".Nop.Authentication");
+
+        if (authCookie != null) {
+            String authToken=authCookie.getValue();
+            JSONObject jsonObject=new JSONObject();
+            jsonObject.put(".Nop.Authentication",authToken);
+            FileWriter writer=new FileWriter("./src/test/resources/localstorage.json");
+            writer.write(jsonObject.toJSONString());
+            writer.flush();
+            writer.close();
+            System.out.println("Auth Token: "+authToken);
+        }
+        else  {
+            System.out.println("No auth token found, check code");
+        }
+
+
+
+    }
+
+
+    // Inject auth token into browser
+    public static void setAuth(WebDriver driver) throws IOException, ParseException, InterruptedException {
+        JSONParser jsonParser=new JSONParser();
+        JSONObject authObj= (JSONObject) jsonParser.parse(new FileReader("./src/test/resources/localstorage.json"));
+        String authToken=authObj.get(".Nop.Authentication").toString();
+        String currentUrl= driver.getCurrentUrl();
+        String domain=new URL(currentUrl).getHost();
+
+        Cookie authCookie = new Cookie.Builder(".Nop.Authentication",authToken)
+                .domain(domain)
+                .path("/")
+                .isSecure(true)
+                .isHttpOnly(true)
+                .build();
+
+        driver.manage().addCookie(authCookie);
+
+
+
+        Thread.sleep(2000);
+
+    }
 }
