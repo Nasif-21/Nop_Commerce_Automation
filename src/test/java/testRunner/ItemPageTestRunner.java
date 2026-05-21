@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import pages.ItemPage;
 
 import java.io.IOException;
 
@@ -21,14 +22,16 @@ public class ItemPageTestRunner extends Setup {
     @Test(priority = 1, description = "Nevigated to Exact page link")
     public void linkredirect()
     {
-        System.out.println(driver.getTitle());
         Assert.assertEquals(driver.getTitle(), ". Cell phones");
     }
 
-    @Test(priority =2, description = "Select an Item")
-    public void selectItem()
-    {
+    @Test(priority =2, description = "Select an Item successfully")
+    public void selectItem() throws InterruptedException {
+        ItemPage itemPage = new ItemPage(driver);
+        itemPage.clickAddToCart();
 
+        String successMessage=itemPage.txtContent.getText();
+        System.out.println(successMessage);
+        Assert.assertEquals(successMessage, "The product has been added to your shopping cart");
     }
-
 }
