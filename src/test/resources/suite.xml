@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Nop Commerce Automation">
+
+    <test name="Register new User">
+        <classes>
+            <class name="testRunner.RegisterTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Log in using the register user">
+        <classes>
+            <class name="testRunner.LoginTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Choose a product">
+        <classes>
+            <class name="testRunner.HomePageTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Add item to the cart">
+        <classes>
+            <class name="testRunner.ItemPageTestRunner"></class>
+        </classes>
+    </test>
+<!--
+
+    <test name="Go to cart and check cart items">
+        <classes>
+            <class name="testRunner.CartTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Give billing address">
+    <classes>
+        <class name="testRunner.CheckoutBillTestRunner"></class>
+    </classes>
+</test>
+
+    <test name="Give shipping address">
+        <classes>
+            <class name="testRunner.ShippingAddressTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Shipping method">
+        <classes>
+            <class name="testRunner.ShippingMethodTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Payment method">
+        <classes>
+            <class name="testRunner.PaymentMethodTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Payment information">
+        <classes>
+            <class name="testRunner.PaymentInfoTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Confirmation check">
+        <classes>
+            <class name="testRunner.ConfirmTestRunner"></class>
+        </classes>
+    </test>
+
+-->
+
+
+
+
+</suite>
