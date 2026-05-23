@@ -95,7 +95,7 @@ public class Utils {
             writer.write(jsonObject.toJSONString());
             writer.flush();
             writer.close();
-            System.out.println("Auth Token: "+authToken);
+
         }
         else  {
             System.out.println("No auth token found, check code");
