@@ -19,7 +19,7 @@ public class ItemPageTestRunner extends Setup {
         driver.get("https://test470.nop-station.com/cell-phones");
     }
 
-    @Test(priority = 1, description = "Nevigated to Exact page link")
+    @Test(priority = 1, description = "Navigated to Exact page link")
     public void linkredirect()
     {
         Assert.assertEquals(driver.getTitle(), ". Cell phones");
