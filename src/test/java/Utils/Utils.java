@@ -128,4 +128,9 @@ public class Utils {
         Thread.sleep(2000);
 
     }
+
+    public static double NumConverter(String pricetxt)
+    {
+        return Double.parseDouble(pricetxt.replace("$","").replace(",","").trim());
+    }
 }
