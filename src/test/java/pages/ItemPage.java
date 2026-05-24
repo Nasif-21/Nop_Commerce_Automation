@@ -19,6 +19,12 @@ public class ItemPage {
     @FindBy(className = "content")
     public WebElement txtContent;
 
+    @FindBy(className = "product-title")
+    public WebElement productTitles;
+
+    @FindBy(className = "prices")
+    public WebElement prices;
+
 
 
     public ItemPage(WebDriver driver) {
