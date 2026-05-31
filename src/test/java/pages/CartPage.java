@@ -30,6 +30,17 @@ public class CartPage {
     @FindBy(id="checkout_attribute_2_3")
     public WebElement PackValue;
 
+    @FindBy(css="tr.order-subtotal .value-summary")
+    public WebElement txtSubTotal;
+
+    @FindBy(css="tr.shipping-cost .value-summary")
+    public  WebElement txtShippingCost;
+
+    @FindBy(css="tr.tax-value .value-summary")
+    public  WebElement txtTaxValue;
+
+    @FindBy(css="tr.order-total .value-summary")
+    public  WebElement txtTotal;
 
     @FindBy(className = "no-data")
     public WebElement txtEmptyCart;
