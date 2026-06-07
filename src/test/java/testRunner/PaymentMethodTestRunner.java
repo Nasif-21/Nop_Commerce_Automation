@@ -25,7 +25,7 @@ public class PaymentMethodTestRunner extends Setup {
     }
 
     // I have used payment using check or money order, if you want to check others, just make the enabled=true
-    @Test(description = "Payment using Nets Easy",enabled = true)
+    @Test(description = "Payment using Nets Easy",enabled = false)
     public void paymentNetsEasy()
     {
         paymentMethodPage = new PaymentMethodPage(driver);
