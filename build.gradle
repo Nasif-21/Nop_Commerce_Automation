@@ -20,6 +20,8 @@ dependencies {
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
     // https://mvnrepository.com/artifact/commons-configuration/commons-configuration
     implementation("commons-configuration:commons-configuration:1.10")
+    // Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation 'io.rest-assured:rest-assured:6.0.0'
 }
 
 test {
