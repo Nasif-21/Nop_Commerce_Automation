@@ -23,7 +23,7 @@ public class RegisterTestRunner extends Setup {
         UserModel userModel=new UserModel();
         String firstName=faker.name().firstName();
         String lastName=faker.name().lastName();
-        String email="skfamily0304+"+Utils.randomNum(10,50)+"@gmail.com";
+        String email="skfamily0304+"+Utils.randomNum(1000,5000)+"@gmail.com";
         String password="123456";
         String confirmPassword=password;
 

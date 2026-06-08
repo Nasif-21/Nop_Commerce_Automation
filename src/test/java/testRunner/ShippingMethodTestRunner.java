@@ -24,25 +24,25 @@ public class ShippingMethodTestRunner extends Setup {
     }
 
     @Test(priority = 1,description = "Shipping using Store")
-    public void StoreShipTest()
-    {
+    public void StoreShipTest() throws InterruptedException {
         shippingMethodPage = new ShippingMethodPage(driver);
         shippingMethodPage.storeShipping();
         wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        Thread.sleep(4000);
         wait.until(ExpectedConditions.urlToBe(driver.getCurrentUrl()));
-        Assert.assertEquals(driver.getCurrentUrl(),"https://test470.nop-station.com/checkout/paymentmethod");
+        Assert.assertEquals(driver.getCurrentUrl(),"https://test470.nop-station.com/checkout/shippingmethod");
 
     }
 
     //If anyone wants to check other payment methods, just remove enable=false and in suite.xml, provide suite name to regression
-    @Test(priority = 2,description = "Shipping using ground", suiteName = "regression", enabled = false)
-    public void GroundShipTest()
-    {
+    @Test(priority = 2,description = "Shipping using ground",enabled = false)
+    public void GroundShipTest() throws InterruptedException {
         shippingMethodPage = new ShippingMethodPage(driver);
         shippingMethodPage.groundShipping();
+        Thread.sleep(4000);
         wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.urlToBe(driver.getCurrentUrl()));
-        Assert.assertEquals(driver.getCurrentUrl(),"https://test470.nop-station.com/checkout/paymentmethod");
+        Assert.assertEquals(driver.getCurrentUrl(),"https://test470.nop-station.com/checkout/shippingmethod");
 
     }
 

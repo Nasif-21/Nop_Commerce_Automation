@@ -56,6 +56,7 @@ public class CheckoutBillTestRunner extends Setup {
         checkOutBillPage.enterAddress(cityName,address1);
 
         wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        Thread.sleep(4000);
         wait.until(ExpectedConditions.urlToBe(driver.getCurrentUrl()));
         Assert.assertEquals(driver.getCurrentUrl(),"https://test470.nop-station.com/checkout/shippingaddress");
     }

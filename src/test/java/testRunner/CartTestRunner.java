@@ -106,10 +106,10 @@ public class CartTestRunner extends Setup {
     }
 
     @Test(priority = 5, description = "Doing checkout")
-    public void properCheckout()
-    {
+    public void properCheckout() throws InterruptedException {
         cartPage.doCheckout();
         wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        Thread.sleep(2000);
         wait.until(ExpectedConditions.urlToBe(driver.getCurrentUrl()));
         Assert.assertEquals(driver.getCurrentUrl(),"https://test470.nop-station.com/checkout/billingaddress");
     }
