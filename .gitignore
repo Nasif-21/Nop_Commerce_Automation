@@ -7,6 +7,7 @@ gradle
 !**/src/test/**/build/
 .kotlin
 src/test/resources/localstorage.json
+src/test/resources/config.properties
 
 
 ### IntelliJ IDEA ###
