@@ -56,8 +56,7 @@ public class PaymentMethodTestRunner extends Setup {
     }
 
     @Test(description = "Payment using Check or Money order",enabled = true)
-    public void paymentCheckorMoney()
-    {
+    public void paymentCheckorMoney() throws IOException, InterruptedException {
         paymentMethodPage = new PaymentMethodPage(driver);
         paymentMethodPage.CheckOrMoneyOrderPayment();
         wait=new WebDriverWait(driver, Duration.ofSeconds(10));
