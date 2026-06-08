@@ -19,12 +19,13 @@
         </classes>
     </test>
 
+
     <test name="Add item to the cart">
         <classes>
             <class name="testRunner.ItemPageTestRunner"></class>
         </classes>
     </test>
-<!--
+
 
     <test name="Go to cart and check cart items">
         <classes>
@@ -68,7 +69,7 @@
         </classes>
     </test>
 
--->
+
 
 
 
