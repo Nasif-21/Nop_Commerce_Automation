@@ -25,7 +25,7 @@ public class Setup {
     @AfterTest
     public void tearDown()
     {
-       // driver.quit();
+        driver.quit();
 
     }
 }
