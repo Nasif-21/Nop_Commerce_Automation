@@ -52,6 +52,23 @@ The automation framework is designed to mimic real-world user behavior and verif
 
 
 ## 📰 Allure Report Screenshot:
+### Overview
+<img width="1915" height="912" alt="image" src="https://github.com/user-attachments/assets/cc46202e-0eaf-4f6f-9e56-72ed8e961d17" />
+<br/>
+
+### Behaviour
+<img width="1917" height="915" alt="image" src="https://github.com/user-attachments/assets/b9ffca4f-3fa0-4675-8b76-ffb17f1266b5" />
+<br/>
+<img width="1918" height="221" alt="image" src="https://github.com/user-attachments/assets/791d9bd7-0fe0-427d-a783-c2f21e947011" />
+<br/>
+
+### Timeline
+<img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/0841ac0d-1b30-4180-862f-21a8db7cab53" />
+<br/>
+
+### Suites
+<img width="1062" height="912" alt="image" src="https://github.com/user-attachments/assets/44f0c075-8830-4d92-8d22-d60017bd3298" />
+<br/>
 
 
 ## 📹 Full automation video:
